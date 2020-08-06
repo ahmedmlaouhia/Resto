@@ -39,12 +39,10 @@
   left: 50%;
   transform: translateX(-50%);
   position: relative;
-  background: white;
-  padding: 50px;
-  padding-bottom: 80px;
+  padding: 30px;
+  padding-top: 10px;
   width: 100%;
   height: auto;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   min-width: 240px;
 }
 .tabs input[name="tab-control"] {
@@ -275,9 +273,9 @@
 
       <header>
 
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top my-0 py-0">
           <div class="container">
-          <a class="navbar-brand my-0 py-0">RESTO</a>
+          <a style="font-size: 40px" class="navbar-brand my-0 py-0">RESTO</a>
           <a class="my-0 py-1 px-2 bg-primary rounded font-weight-bolder" onclick="copy()" >Order +216 12345678</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -326,11 +324,12 @@
       </header>
 
         
-      <div style="background-color: red;" class="my-0">
-          <nav class="navbar navbar-expand-sm sticky-top">
-              <h4 style="background-color: red;"class="collapse navbar-collapse text-center justify-content-center py-0 my-0" id="Menu">Menu</h4>
-            </nav>
-          <div class="tabs">
+      <div class="py-0 my-0">
+          <nav class="navbar navbar-expand sticky-top py-0 my-0 px-0 mx-0">
+              <h4 style="background-color: red;"class="collapse navbar-collapse text-center justify-content-center" id="Menu">Menu</h4>
+
+          </nav>
+        <div class="tabs">
         <input type="radio" id="tab1" name="tab-control" checked />
         <input type="radio" id="tab2" name="tab-control" />
         <input type="radio" id="tab3" name="tab-control" />
@@ -392,7 +391,7 @@
           </div>
         </div>
       <div style="background-color: #672711;">
-        <nav style="background-color: #672711;" class="navbar navbar-expand-sm sticky-top">
+        <nav style="background-color: #672711;" class="navbar navbar-expand sticky-top">
               <h4 class="collapse navbar-collapse text-center justify-content-center my-0 py-0" id="About US">About US</h4>
             </nav>
         <p class=" text-center pb-3 pt-2 my-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -401,7 +400,7 @@
           Aliquam a pellentesque eros, eu porta tellus.</p>
     </div>
         <div class="bg-warning ">
-          <nav class="navbar navbar-expand-sm bg-warning sticky-top">
+          <nav class="navbar navbar-expand bg-warning sticky-top">
               <h4 class="collapse navbar-collapse text-center justify-content-center my-0 py-0 " id="Map">Map</h4>
           </nav>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6384.664595393403!2d10.25258153579113!3d36.858464176609544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2caabaa408541%3A0xf461c93f74f856ca!2sDowntown%20Lounge%20Laouina!5e0!3m2!1sen!2stn!4v1596631440736!5m2!1sen!2stn" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
