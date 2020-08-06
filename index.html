@@ -7,6 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <style>
+      .fab {
+        color: white;
+        font-size: 30px;
+        padding: 10px
+      }
       * {
         font-family: 'lobster', cursive;
         font-size: 20px;
@@ -268,15 +273,15 @@
     </style>
     <title>Resto Shit</title>
   </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: #000000">
     <main>
 
       <header>
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top my-0 py-0">
           <div class="container">
-          <a style="font-size: 40px" class="navbar-brand my-0 py-0">RESTO</a>
-          <a class="my-0 py-1 px-2 bg-primary rounded font-weight-bolder" onclick="copy()" >Order +216 12345678</a>
+          <a style="font-size: 40px; cursor: default;" class="navbar-brand my-0 py-0">RESTO</a>
+          <a class="my-0 py-1 px-2 bg-primary rounded font-weight-bolder" style="cursor: pointer;" onclick="copy()" >Order +216 12345678</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -325,11 +330,10 @@
 
         
       <div class="py-0 my-0">
-          <nav class="navbar navbar-expand sticky-top py-0 my-0 px-0 mx-0">
-              <h4 style="background-color: red;"class="collapse navbar-collapse text-center justify-content-center" id="Menu">Menu</h4>
-
+          <nav style="background-color: red;" class="navbar navbar-expand sticky-top py-0 my-0 px-0 mx-0">
+              <h4 class="collapse navbar-collapse text-center justify-content-center " id="Menu">Menu</h4>
           </nav>
-        <div class="tabs">
+        <div class="tabs bg-light">
         <input type="radio" id="tab1" name="tab-control" checked />
         <input type="radio" id="tab2" name="tab-control" />
         <input type="radio" id="tab3" name="tab-control" />
@@ -390,35 +394,41 @@
           </div>
           </div>
         </div>
-      <div style="background-color: #672711;">
-        <nav style="background-color: #672711;" class="navbar navbar-expand sticky-top">
-              <h4 class="collapse navbar-collapse text-center justify-content-center my-0 py-0" id="About US">About US</h4>
-            </nav>
-        <p class=" text-center pb-3 pt-2 my-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Integer tincidunt ex purus, a cursus ligula posuere ac. 
-          Curabitur ligula est, pharetra a lorem in, viverra fringilla justo.
-          Aliquam a pellentesque eros, eu porta tellus.</p>
-    </div>
-        <div class="bg-warning ">
-          <nav class="navbar navbar-expand bg-warning sticky-top">
-              <h4 class="collapse navbar-collapse text-center justify-content-center my-0 py-0 " id="Map">Map</h4>
+        <div class="py-0 my-0">
+          <nav class="navbar navbar-expand bg-warning sticky-top py-0 my-0 px-0 mx-0">
+              <h4 class="collapse bg-warning navbar-collapse text-center justify-content-center" id="Map">Map</h4>
           </nav>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6384.664595393403!2d10.25258153579113!3d36.858464176609544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2caabaa408541%3A0xf461c93f74f856ca!2sDowntown%20Lounge%20Laouina!5e0!3m2!1sen!2stn!4v1596631440736!5m2!1sen!2stn" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="my-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6384.664595393403!2d10.25258153579113!3d36.858464176609544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2caabaa408541%3A0xf461c93f74f856ca!2sDowntown%20Lounge%20Laouina!5e0!3m2!1sen!2stn!4v1596631440736!5m2!1sen!2stn" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-<footer class="page-footer bg-dark pt-2">
-  <div class="container-fluid text-center text-md-left">
+<footer class="page-footer bg-secondary my-0 py-1">
+  <div class="container-fluid text-center">
     <div class="row">
-      <div class="text-center" class="col-md-3 mb-md-0 mb-3">
-        <h4 class="text-center">Social</h4>
-          <a class="light" href="#!">Link 1</a><a href="#!">Link 2</a><a href="#!">Link 3</a><a href="#!">Link 4</a>
-
+      <div class=" col-6 col-md-3 text-center mx-0" >
+        <h4>Social</h4>
+          <a class="light" href="#!"><i class="fab fa-pinterest" ></i></a>
+          <a href="#!"><i class="fab fa-facebook" ></i></a>
+          <a href="#!"><i class="fab fa-instagram" ></i></a>
+          <a href="#!"><i class="fab fa-whatsapp" ></i></a>
       </div>
+      <div class="col-6 col-md-3 text-center mx-0" >
+        <h4>Contact</h4>
+          <a class="light" href="#!"><i class="fab fa-pinterest" ></i></a>
+          <a href="#!"><i class="fab fa-facebook" ></i></a>
+          <a href="#!"><i class="fab fa-instagram" ></i></a>
+          <a href="#!"><i class="fab fa-whatsapp" ></i></a>
+      </div>
+      <div class="col-12 col-md-6 mx-0 " style="width: 100%">
+              <h4 id="About US">About US</h4>
+        <p class=" text-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Integer tincidunt ex purus, a cursus ligula posuere ac. 
+          Curabitur ligula </p>
+    </div>
     </div>
   </div>
-  <div class="footer-copyright text-center py-2">© 2020 Copyright:
-    <a href="https://youtube.com/">hereu.com</a>
+  <div class="footer-copyright text-center py-1">© 2020 Copyright:
+    <a href="https://youtube.com/" style="color: orange;">fuckyou</a>
   </div>
-      </footer>
+</footer>
     </main>
 
 
