@@ -16,30 +16,282 @@
         width: 100%;
         height: 100%;
       }
+      p {
+        padding-left: 30%;
+        padding-right: 30%;
+        text-align: center;
+        width: 100%;
+      }
+      body::-webkit-scrollbar {
+        width: 0.5em;
+      }
+       
+      body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+       
+      body::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+      /* Tabs */
+.tabs {
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  background: white;
+  padding: 50px;
+  padding-bottom: 80px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  min-width: 240px;
+}
+.tabs input[name="tab-control"] {
+  display: none;
+}
+.tabs .content section h2,
+.tabs ul li label {
+  font-weight: bold;
+  font-size: 18px;
+  color: maroon;
+}
+.tabs ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.tabs ul li {
+  box-sizing: border-box;
+  flex: 1;
+  width: 25%;
+  padding: 0 10px;
+  text-align: center;
+}
+.tabs ul li label {
+  transition: all 0.3s ease-in-out;
+  color: #929daf;
+  padding: 5px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+}
+.tabs ul li label br {
+  display: none;
+}
+.tabs .slider {
+  position: relative;
+  width: 25%;
+  transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+.tabs .slider .indicator {
+  position: relative;
+  width: 50px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 4px;
+  background: maroon;
+}
+.tabs .content {
+  margin-top: 30px;
+}
+.tabs .content section {
+  display: none;
+  animation-name: content;
+  animation-direction: normal;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  line-height: 1.4;
+}
+.tabs .content section h2 {
+  color: maroon;
+  display: none;
+}
+.tabs .content section h2::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: maroon;
+  margin-top: 5px;
+  left: 1px;
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(1):checked
+  ~ ul
+  > li:nth-child(1)
+  > label {
+  cursor: default;
+  color: maroon;
+}
+@media (max-width: 600px) {
+  .tabs
+    input[name="tab-control"]:nth-of-type(1):checked
+    ~ ul
+    > li:nth-child(1)
+    > label {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .slider {
+  transform: translateX(0%);
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(1):checked
+  ~ .content
+  > section:nth-child(1) {
+  display: block;
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(2):checked
+  ~ ul
+  > li:nth-child(2)
+  > label {
+  cursor: default;
+  color: maroon;
+}
+@media (max-width: 600px) {
+  .tabs
+    input[name="tab-control"]:nth-of-type(2):checked
+    ~ ul
+    > li:nth-child(2)
+    > label {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .slider {
+  transform: translateX(100%);
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(2):checked
+  ~ .content
+  > section:nth-child(2) {
+  display: block;
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(3):checked
+  ~ ul
+  > li:nth-child(3)
+  > label {
+  cursor: default;
+  color: maroon;
+}
+@media (max-width: 600px) {
+  .tabs
+    input[name="tab-control"]:nth-of-type(3):checked
+    ~ ul
+    > li:nth-child(3)
+    > label {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .slider {
+  transform: translateX(200%);
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(3):checked
+  ~ .content
+  > section:nth-child(3) {
+  display: block;
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(4):checked
+  ~ ul
+  > li:nth-child(4)
+  > label {
+  cursor: default;
+  color: maroon;
+}
+@media (max-width: 600px) {
+  .tabs
+    input[name="tab-control"]:nth-of-type(4):checked
+    ~ ul
+    > li:nth-child(4)
+    > label {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .slider {
+  transform: translateX(300%);
+}
+.tabs
+  input[name="tab-control"]:nth-of-type(4):checked
+  ~ .content
+  > section:nth-child(4) {
+  display: block;
+}
+@keyframes content {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@media (max-width: 1000px) {
+  .tabs ul li label {
+    white-space: initial;
+  }
+  .tabs ul li label br {
+    display: initial;
+  }
+}
+@media (max-width: 600px) {
+  .tabs ul li label {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .tabs ul li label span {
+    display: none;
+  }
+  .tabs .slider {
+    display: none;
+  }
+  .tabs .content {
+    margin-top: 20px;
+  }
+  .tabs .content section h2 {
+    display: block;
+  }
+}
     </style>
     <title>Resto Shit</title>
   </head>
-<body style="height: 1000px" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <main>
 
       <header>
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ">
           <div class="container">
-          <a class="navbar-brand" href="#">RESTO</a>
+          <a class="navbar-brand my-0 py-0">RESTO</a>
+          <a class="my-0 py-1 px-2 bg-primary rounded font-weight-bolder" onclick="copy()" >Order +216 12345678</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+            <span class="navbar-toggler-icon"></span>
+          </button>
   <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
     <ul class="navbar-nav ">
       <li class="nav-item">
-        <a class="nav-link"  href="#">Menu</a>
+        <a class="nav-link my-0 py-0"  href="#Menu">Menu</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Map</a>
+        <a class="nav-link my-0 py-0" href="#About US">About US</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#About">About</a>
+        <a class="nav-link my-0 py-0" href="#Map">Map</a>
       </li>
     </ul>
   </div>
@@ -72,27 +324,99 @@
   </a>
 </div>
       </header>
-      <section>
+
         
-      </section>
-<footer class="page-footer font-small bg-dark dark pt-4 bottom">
+      <div style="background-color: red;" class="my-0">
+          <nav class="navbar navbar-expand-sm sticky-top">
+              <h4 style="background-color: red;"class="collapse navbar-collapse text-center justify-content-center py-0 my-0" id="Menu">Menu</h4>
+            </nav>
+          <div class="tabs">
+        <input type="radio" id="tab1" name="tab-control" checked />
+        <input type="radio" id="tab2" name="tab-control" />
+        <input type="radio" id="tab3" name="tab-control" />
+        <input type="radio" id="tab4" name="tab-control" />
+        <ul>
+          <li title="Fast Food">
+            <label for="tab1" role="button"
+              ><i class="fas fa-hamburger"></i> <br /><span
+                >Fast Food</span
+              ></label
+            >
+          </li>
+          <li title="Pizza">
+            <label for="tab2" role="button"
+              ><i class="fas fa-pizza-slice"></i> <br /><span
+                >Pizza</span
+              ></label
+            >
+          </li>
+          <li title="Drinks">
+            <label for="tab3" role="button"
+              ><i class="fas fa-cocktail"></i> <br /><span>Drinks</span></label
+            >
+          </li>
+          <li title="Special">
+            <label for="tab4" role="button"
+              ><i class="fas fa-utensils"></i> <br /><span
+                >Special</span
+              ></label
+            >
+          </li>
+        </ul>
+
+        <div class="slider"><div class="indicator"></div></div>
+        <div class="content">
+          <section>
+            <h2>Fast Food</h2>
+
+            fast food
+
+          </section>
+          <section>
+            <h2>Pizza</h2>
+            
+            pizza
+
+          </section>
+          <section>
+            <h2>Drinks</h2>
+            drinks
+
+          </section>
+          <section>
+            <h2>Special</h2>
+            specials
+            </section>
+
+          </div>
+          </div>
+        </div>
+      <div style="background-color: #672711;">
+        <nav style="background-color: #672711;" class="navbar navbar-expand-sm sticky-top">
+              <h4 class="collapse navbar-collapse text-center justify-content-center my-0 py-0" id="About US">About US</h4>
+            </nav>
+        <p class=" text-center pb-3 pt-2 my-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Integer tincidunt ex purus, a cursus ligula posuere ac. 
+          Curabitur ligula est, pharetra a lorem in, viverra fringilla justo.
+          Aliquam a pellentesque eros, eu porta tellus.</p>
+    </div>
+        <div class="bg-warning ">
+          <nav class="navbar navbar-expand-sm bg-warning sticky-top">
+              <h4 class="collapse navbar-collapse text-center justify-content-center my-0 py-0 " id="Map">Map</h4>
+          </nav>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6384.664595393403!2d10.25258153579113!3d36.858464176609544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2caabaa408541%3A0xf461c93f74f856ca!2sDowntown%20Lounge%20Laouina!5e0!3m2!1sen!2stn!4v1596631440736!5m2!1sen!2stn" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+<footer class="page-footer bg-dark pt-2">
   <div class="container-fluid text-center text-md-left">
     <div class="row">
-      <div id="About" class="col-md-6 mt-md-0 mt-3">
-        <h5 class="text-uppercase">About US</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt ex purus, a cursus ligula posuere ac. Curabitur ligula est, pharetra a lorem in, viverra fringilla justo. Aliquam a pellentesque eros, eu porta tellus. Fusce dolor diam, dignissim et magna cursus, suscipit varius mauris. Maecenas tempus placerat magna, et egestas nibh ornare facilisis.</p>
-
-      </div>
-      <hr class="clearfix w-100 d-md-none pb-3 ">
-
-      <div class="col-md-3 mb-md-0 mb-3">
-        <h5 >Social</h5>
-          <a href="#!">Link 1</a><a href="#!">Link 2</a><a href="#!">Link 3</a><a href="#!">Link 4</a>
+      <div class="text-center" class="col-md-3 mb-md-0 mb-3">
+        <h4 class="text-center">Social</h4>
+          <a class="light" href="#!">Link 1</a><a href="#!">Link 2</a><a href="#!">Link 3</a><a href="#!">Link 4</a>
 
       </div>
     </div>
   </div>
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <div class="footer-copyright text-center py-2">© 2020 Copyright:
     <a href="https://youtube.com/">hereu.com</a>
   </div>
       </footer>
@@ -104,5 +428,16 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d9d5094af0.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      const copy = () => {
+        let aux = document.createElement("input");
+        aux.value = "+216 12345678";
+        document.body.appendChild(aux);
+        aux.select();
+        aux.setSelectionRange(0, 99999); 
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+      }
+    </script>
   </body>
 </html>
