@@ -284,7 +284,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="0" class="bg-secondary">
     <main>
       <header>
-        <nav id="navbar" style="transition: 0.3s; background-color: rgba(1,1,50,0.6);" class="navbar navbar-expand-lg navbar-dark fixed-top py-0">
+        <nav id="navbar" style="transition: 0.4s; background-color: rgba(1,1,50,0.6);" class="navbar navbar-expand-lg navbar-dark fixed-top py-0">
           <div class="container-fluid">
           <a style="font-size: 40px; cursor: default;" class="navbar-brand my-0 py-0">RESTO</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -619,11 +619,11 @@
     <script src="https://kit.fontawesome.com/d9d5094af0.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       window.onscroll = function(e) {
-
+        let x = document.getElementById("navbar")
   if (this.oldScroll > this.scrollY) {
-    document.getElementById("navbar").style.top = "0"
+    x.style.top = "0"
   } else {
-    document.getElementById("navbar").style.top = "-60px"
+    x.style.top = "-280px"
   }
   this.oldScroll = this.scrollY;
 }
