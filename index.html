@@ -275,15 +275,16 @@
     margin-left: 25px;
     font-size: 20px;
   }
+  html {
+  scroll-behavior: smooth;
+}
     </style>
     <title>Resto</title>
   </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50" class="bg-secondary">
+<body data-spy="scroll" data-target=".navbar" data-offset="0" class="bg-secondary">
     <main>
-
       <header>
-
-        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top py-0">
+        <nav id="navbar" style="transition: 0.3s; background-color: rgba(1,1,50,0.6);" class="navbar navbar-expand-lg navbar-dark fixed-top py-0">
           <div class="container-fluid">
           <a style="font-size: 40px; cursor: default;" class="navbar-brand my-0 py-0">RESTO</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -293,29 +294,29 @@
             <ul class="navbar-nav ">
               <li class="nav-item ">
                   <div class="mx-1 my-1">
-                    <a class="btn py-1 px-2 bg-light rounded font-weight-bold" href="tel:+216123456789">Order +216 12345678</a>
+                    <a style="background-color: rgba(200,200,200,0.8);" class="btn py-1 px-2 rounded font-weight-bold" href="tel:+216123456789">Order +216 12345678</a>
                   </div>
               </li>
               <li class="nav-item">
                 <div class="mx-1 my-1">
-                  <a class="btn py-1 px-2 bg-light rounded" href="#Menu">Menu</a>
+                  <a style="background-color: rgba(200,200,200,0.8);" class="btn py-1 px-2 rounded" href="#Menu">Menu</a>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="mx-1 my-1">
-                  <a class="btn py-1 px-2 bg-light rounded" href="#Map">Map</a>
+                  <a style="background-color: rgba(200,200,200,0.8);" class="btn py-1 px-2 rounded" href="#Map">Map</a>
                 </div>
               </li>
               <li class="nav-item">
                 <div class="mx-1 my-1">
-                  <a class="btn py-1 px-2 bg-light rounded" href="#About US">About us</a>
+                  <a style="background-color: rgba(200,200,200,0.8);" class="btn py-1 px-2 rounded" href="#About US">About us</a>
                 </div>
               </li>
             </ul>
           </div>
           </div>
         </nav>
-  <div id="ss" class="carousel slide" style="top: 0%; position:relative;" data-ride="carousel">
+  <div id="ss" class="carousel slide"data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#ss" data-slide-to="0" class="active"></li>
     <li data-target="#ss" data-slide-to="1"></li>
@@ -344,9 +345,9 @@
       </header>
 
         
-      <div  id="Menu" >
-          <nav style="background-color: red;" class="navbar navbar-expand sticky-top py-1 my-0 px-0 mx-0">
-              <h4 class="collapse navbar-collapse justify-content-left  " style="margin-left: 180px; margin-top: 6px; font-size: 35px">Menu</h4>
+      <div >
+          <nav id="Menu" style="background-color: red;" class="navbar navbar-expand py-1 my-0 px-0 mx-0">
+              <h4 class="collapse navbar-collapse justify-content-center  " style=" margin-top: 6px; font-size: 35px">Menu</h4>
           </nav>
         <div class="tabs bg-light my-0 mx-0 px-0 py-2" >
         <input type="radio" id="tab1" name="tab-control" checked />
@@ -358,8 +359,7 @@
             <label for="tab1" role="button"><i class="fas fa-hamburger"></i> <br /><span>Fast Food</span></label>
           </li>
           <li title="Pizza">
-            <label for="tab2" role="button"
-              ><i class="fas fa-pizza-slice"></i> <br /><span>Pizza</span></label>
+            <label for="tab2" role="button"><i class="fas fa-pizza-slice"></i> <br /><span>Pizza</span></label>
           </li>
           <li title="Drinks">
             <label for="tab3" role="button"><i class="fas fa-cocktail"></i> <br /><span>Drinks</span></label>
@@ -369,7 +369,8 @@
           </li>
         </ul>
 
-        <div class="slider "><div class="indicator"></div></div>
+        <div class="slider "><div class="indicator"></div>
+      </div>
 
         <div class="content mx-0 my-0 py-0">
           <section style="color: black; margin:0px; background-image: url(p1.jpg); background-size:cover;" class="container-fluid">
@@ -578,8 +579,8 @@
       </div>
     </div>
         <div class="py-0 my-0" style="top: -10px ;position: relative;">
-          <nav class="navbar navbar-expand bg-warning sticky-top py-1 my-0 px-0 mx-0">
-              <h4 class="collapse bg-warning navbar-collapse" id="Map" style="margin-left: 180px; margin-top: 6px; font-size: 35px">Map</h4>
+          <nav id="Map" style="background-color: orange" class="navbar navbar-expand py-1 my-0 px-0 mx-0">
+              <h4 class="collapse navbar-collapse justify-content-center" style=" margin-top: 6px; font-size: 35px">Map</h4>
           </nav>
           <iframe class="my-0 py-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6384.664595393403!2d10.25258153579113!3d36.858464176609544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2caabaa408541%3A0xf461c93f74f856ca!2sDowntown%20Lounge%20Laouina!5e0!3m2!1sen!2stn!4v1596631440736!5m2!1sen!2stn" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
@@ -588,7 +589,7 @@
     <section class="row">
       <div class=" col-6 col-md-3 text-center mx-0 px-2" >
         <h4 style="color: black;">Social</h4>
-          <div class="btn-group rounded" role="group" >
+          <div class="btn-group rounded " role="group" >
             <a href="#!" class="btn fab fa-facebook btn-dark"></a>
             <a href="#!" class="btn fab fa-instagram btn-dark"></a>
             <a href="#!" class="btn fab fa-whatsapp btn-dark"></a>
@@ -597,7 +598,7 @@
       </div>
       <div class="col-6 col-md-3 text-center mx-0 px-2" >
         <h4 style="color: black;">Contact</h4>
-          <h6 style="color: rgba(255,255,255,0.6)">ahmedmlaouhia6 @gmail.com</h6>
+          <h6 class="container-fluid" style="color: rgba(255,255,255,0.6)">ahmedmlaouhia6 @gmail.com</h6>
       </div>
       <div class="col-12 col-md-6 mx-0 px-0 px-5" >
               <h4 id="About US" style="color: black;">About US</h4>
@@ -617,6 +618,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d9d5094af0.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
+      window.onscroll = function(e) {
+
+  if (this.oldScroll > this.scrollY) {
+    document.getElementById("navbar").style.top = "0"
+  } else {
+    document.getElementById("navbar").style.top = "-60px"
+  }
+  this.oldScroll = this.scrollY;
+}
     </script>
   </body>
 </html>
